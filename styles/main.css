@@ -204,6 +204,8 @@ body {
     cursor: pointer;
   }
 
+  /* Modal window backdrop */
+
   .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
@@ -247,9 +249,98 @@ body {
 
 }
 
+.modal-heading {
+  margin-top: 40px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+color: #212121;
+}
+
+.form {
+  width: 448px;
+  height: 342px;
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.form-field {
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.form-field input {
+  display: block;
+  width: 448px;
+  height: 40px;
+  margin: 0px;
+  padding: 6px 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.form-field:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.form-field-title {
+  display: block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #757575;
+  text-align: justify;
+  margin-bottom: 4px;
+}
+
+.form-field-comment {
+  display: block;
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
+  padding-top: 12px;
+  padding-left: 16px;
+}
+
+.checkbox {
+  margin-top: 20px;
+  margin-right: 9px;
+  
+}
+
+.checkbox-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
 .modal-button-send {
  width: 200px;
  height: 50px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 30px;
+ padding: 0px;
  background-color: var(--accent-color);
  font-family: Roboto;
  font-style: bold;
@@ -260,8 +351,29 @@ body {
 }
 
 .modal-button-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--primary-white-color);
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
 
+  border-color: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+
+  background-image: url("/Images/close-svg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+.modal-button-close:hover,
+.modal-button-close:focus {
+  fill: var(--accent-color);
+}
+
+
 
   /* Why are we */
 
@@ -584,25 +696,40 @@ transition: fill 250ms var(--transition-time-function);
   height: 20px;
 }
 
-/* .sign-in-footer {
-  display: flex;
-  justify-content: space-between;
+.sign-in-footer {
   margin: 0px;
   width: 570px;
-  height: 46px;
+  /* height: 46px; */
   padding-top: 72px;
   padding-right: 216px;
+  
 }
 
-.sign-in-footer-list {
-  list-style: none;
-  margin: 0px;
-} */
 
-/* .button-footer {
+
+.footer-sign-in-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.sign-in-frame-input {
+  width: 358px;
+  height: 50px;
+  background-color: #2F303A;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.button-footer {
   display: inline-flex;
   border: none;
-  margin: 0px;
+  margin-left: 12px;
   width: 200px;
   height: 50px;
   background-color: var(--accent-color);
@@ -623,16 +750,24 @@ transition: fill 250ms var(--transition-time-function);
   padding-left: 29px;
   padding-right: 62px;
   color: #FFFFFF;
-} */
+}
 
-/* .button-footer > .icon {
-  width: 20px;
-  height: 20px;
-  background-image: url(../Images/sprite.svg#icon-send);
-  background-size: contain;
-} */
+.button-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  
+  background-image: url("/Images/send.svg");
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+}
 
-/* .button-footer-text {
+
+
+.button-footer-text {
+  margin-bottom: 20px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -643,9 +778,6 @@ transition: fill 250ms var(--transition-time-function);
   color: #FFFFFF;
 }
 
-.button-footer-wrapper {
-  margin-top: 20px;
-} */
 
 
 /* Portfolio */

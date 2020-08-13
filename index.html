@@ -69,8 +69,35 @@
           <button data-modal-open class="button-primary" type="button">Заказать услугу</button>
           <div data-modal class="backdrop is-hidden">
             <div class="modal">
-              <button class="modal-button-send">Отправить</button>
-              <button data-modal-close class="modal-button-close">X</button>
+              <button data-modal-close class="modal-button-close"></button>
+              <p class="modal-heading">Оставьте свои данные, мы вам перезвоним</p>
+              <form class="form js-speaker-form">
+                <div class="form-field">
+                  <label class="form-field-title" for="name">Имя
+                    <input type="name" name="name" id="name">
+                  </label>
+                </div>
+                <div class="form-field">
+                  <label class="form-field-title" for="tel">Телефон
+                    <input type="tel" name="tel" id="tel">
+                  </label>
+                </div>
+                <div class="form-field">
+                  <label class="form-field-title" for="email">Почта
+                    <input type="email" name="email" id="email">
+                  </label>
+                </div>
+                <div class="form-field">
+                  <label class="form-field-title" for="comment">Комментарий
+                  </label>
+                  <textarea class="form-field-comment" name="comment" id="comment" placeholder="Введите текст"></textarea>
+                </div>
+                <label class="checkbox-text"><input type="checkbox" class="checkbox">Соглашаюсь с рассылкой и принимаю <span>Условия договора
+                </span></label>
+
+                <button type="submit" class="modal-button-send">Отправить</button>
+                
+              </form>
             </div>
             
           </div>
@@ -430,22 +457,19 @@
       </ul>
     </div>
   </div>
-  <!-- <div class="sign-in-footer">
-    <ul class="sign-in-footer-list">
-      <li>
+  <div class="sign-in-footer">
         <b class="button-footer-text">
           подпишитесь на рассылку
         </b>
-      </li>
-      <li>
-        <div class="button-footer-wrapper">
-          <button class="button-footer">Подписаться</button>
-        </div>
-        
-      </li>
-    </ul>
+      <form class="footer-sign-in-form">
+        <label>
+          <input type="email" class="sign-in-frame-input" placeholder="E-mail">
+        </label>
+            <button type="button" class="button-footer">Подписаться
+            </button>
+      </form>
   
-  </div> -->
+  </div>
 </footer>
 <script src="./js/modal.js"></script>
   </body>
