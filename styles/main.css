@@ -288,12 +288,9 @@ body {
 }
 
 .form-field:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
-.form-field-input {
-  
-}
 
 .form-field input, textarea:focus {
   outline: none;
@@ -304,7 +301,7 @@ body {
   border-color: var(--accent-color);
 }
 
-.form-field-input:focus + .modal-icon-svg {
+.form-field-input:focus ~ .modal-icon-svg {
   fill: var(--accent-color);
 }
 
@@ -369,6 +366,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+  color: #000000;
 }
 
 .form-field-comment:focus + .form-field-title {
@@ -460,15 +458,23 @@ body {
   cursor: pointer;
   box-sizing: border-box;
 
-  background-image: url("/Images/close-svg.svg");
+  /* background-image: url("/Images/sprite.svg#icon-close-black");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.modal-button-close:hover,
-.modal-button-close:focus {
+.modal-button-close:hover {
   fill: var(--accent-color);
+}
+
+.modal-button-close-svg {
+  position: absolute;
+  top: 5.5px;
+  right: 5px;
+  width: 18px;
+  height: 18px;
+  
 }
 
 
