@@ -378,7 +378,7 @@
         <b class="button-footer-text">
           подпишитесь на рассылку
         </b>
-        <form class="footer-sign-in-form">
+        <form action="#" method="GET" class="footer-sign-in-form">
           <label>
             <input
               type="email"
@@ -386,7 +386,13 @@
               placeholder="E-mail"
             />
           </label>
-          <button type="button" class="button-footer">Подписаться</button>
+          <button type="submit" class="button-footer">
+            Подписаться
+            <span
+              ><svg class="icon-send-svg">
+                <use href="./Images/sprite.svg#icon-send"></use></svg
+            ></span>
+          </button>
         </form>
       </div>
     </footer>
